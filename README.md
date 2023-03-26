@@ -120,13 +120,3 @@ display(col, sw): Renders the particle on the canvas with the specified color an
 follow(vectors): Updates the particle's acceleration based on the flow field vector it's following.
 edges(): Wraps the particle's position to the opposite edge of the canvas when it goes out of bounds.
 
-When run, the code creates a visually appealing, dynamic flow field-like pattern on the canvas, with particles following the field and leaving trails as they move.
-
-// Global variables
-let inc = 0.1;
-let scl = 20;
-let cols, rows;
-let zoff = 0;
-let particles = [];
-let flowfield;
-
