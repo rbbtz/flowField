@@ -1,5 +1,7 @@
 # flowField
 
+Copy the .js file and paste into the editor playground at https://editor.p5js.org or open the .html file for the experience in a web browser.
+
 In this p5.js code sets up a flow field with dynamic strokeWeight, pixel colors, and transparent curves for a soft, subtle appearance.
 The code creates a grid of vectors and uses Perlin noise to determine their angles.
 It then draws curves that follow these vectors with dynamic strokeWeight, color, and transparency based on the angle of the vector.
