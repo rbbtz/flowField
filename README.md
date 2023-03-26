@@ -84,3 +84,49 @@ Finally, the edges() method is called to ensure that the particle stays within t
 
 The program generates an animated display of particles moving according to a flow field that is generated using Perlin noise.
 The behavior of the particles is influenced by the noise values, and the resulting animation can be mesmerizing.
+
+Global variables are declared:
+
+inc: Increment value for noise.
+
+scl: Scale factor to control the size of the flow field grid.
+
+cols, rows: Number of columns and rows in the grid.
+
+zoff: z-offset for 3D Perlin noise.
+
+particles: Array to store the particle objects.
+
+flowfield: Array to store the flow field vectors.
+
+The setup function initializes the canvas, color mode, and background. It calculates the number of columns and rows based on the canvas size and scale, initializes the flow field array, and creates 1000 Particle objects.
+
+The draw function updates the flow field vectors based on Perlin noise with changing z-offset. It then iterates through the particles array and:
+Sets the color and stroke weight of the particle based on its velocity.
+
+Updates the particle's position based on the flow field vector it's following.
+
+Updates the particle's position, velocity, and acceleration.
+
+The Particle class defines the properties and methods for a single particle:
+
+pos: Position vector.
+vel: Velocity vector.
+acc: Acceleration vector.
+maxspeed: Maximum speed of the particle.
+update(): Updates the particle's velocity, acceleration, and position.
+applyForce(force): Applies a force to the particle's acceleration.
+display(col, sw): Renders the particle on the canvas with the specified color and stroke weight.
+follow(vectors): Updates the particle's acceleration based on the flow field vector it's following.
+edges(): Wraps the particle's position to the opposite edge of the canvas when it goes out of bounds.
+
+When run, the code creates a visually appealing, dynamic flow field-like pattern on the canvas, with particles following the field and leaving trails as they move.
+
+// Global variables
+let inc = 0.1;
+let scl = 20;
+let cols, rows;
+let zoff = 0;
+let particles = [];
+let flowfield;
+
